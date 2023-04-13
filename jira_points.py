@@ -20,8 +20,6 @@ def _all_sum(target_count, targetSum, numbers, memo):
             for combination in remainder_combinations:
                 if len(combination) < target_count:
                     all_combinations.append(combination + [num])
-                elif len(combination) == target_count - 1 and remainder >= min(numbers):
-                    all_combinations.append(combination + [num])
 
     memo[targetSum] = all_combinations
     return memo[targetSum]
