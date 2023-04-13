@@ -4,6 +4,7 @@ def all_sum(task_count, targetSum, numbers):
 
 def _all_sum(target_count, targetSum, numbers, memo):
     if targetSum in memo:
+        # print(f'Cache hit at {targetSum=}')
         return memo[targetSum]
     if targetSum == 0:
         return [[]]
