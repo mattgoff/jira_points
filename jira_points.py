@@ -33,10 +33,9 @@ fibinaci_seq = [1, 2, 3, 5, 8, 13, 21, 34]
 all_combos_less_than_or_equal_target_count = all_sum(4, 29, fibinaci_seq)
 [
     valid_combinations.append(
-    sorted(combo))for combo in all_combos_less_than_or_equal_target_count
+        sorted(combo)) for combo in all_combos_less_than_or_equal_target_count
     if len(combo) == 4 and sorted(combo) not in valid_combinations
 ]
 
 for combo in valid_combinations:
     print(combo)
-
