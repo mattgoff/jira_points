@@ -31,12 +31,11 @@ fibinaci_seq = [1, 2, 3, 5, 8, 13, 21, 34]
 
 #  There are 4 Jira Tasks, Totaling 29 points and each of the 4 tasks can have only Fib numbers as point values
 all_combos_less_than_or_equal_target_count = all_sum(4, 29, fibinaci_seq)
-
-for combination in all_combos_less_than_or_equal_target_count:
-    if len(combination) == 4:
-        sorted_combination = sorted(combination)
-        if sorted_combination not in valid_combinations:
-            valid_combinations.append(sorted_combination)
+[
+    valid_combinations.append(
+    sorted(combo))for combo in all_combos_less_than_or_equal_target_count
+    if len(combo) == 4 and sorted(combo) not in valid_combinations
+]
 
 for combo in valid_combinations:
     print(combo)
